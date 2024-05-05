@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Product Management</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../public/css/index.css" />
+</head>
+
+<body>
+  <main class="bg-dark">
+    <div class="container product-managerment bg-base">
+      <h2 class="title-cyber">
+        <span class="cyber--title">Product </span><span class="product--title">Management</span>
+      </h2>
+      <div class="product-managerment__content">
+        <div class="mb-4 text-right">
+          <button id="btnPopupModalAdd" class="btn btn-lg btn-outline-warning" data-toggle="modal"
+            data-target="#studentModal">
+            Add New Product
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="studentModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 id="title-model" class="modal-title" id="exampleModalLabel">
+                    Add New Product
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text min-width" id="nameProduct">Name</span>
+                      </div>
+                      <input id="name" type="text" class="form-control" placeholder="Product name"
+                        aria-label="Product Name" aria-describedby="nameProduct" />
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text min-width" id="amountProduct">Amount</span>
+                      </div>
+                      <input id="amount" type="text" class="form-control" placeholder="Amount " aria-label="Amount"
+                        aria-describedby="amountProduct" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text min-width" id="priceProduct">Price</span>
+                      </div>
+                      <input id="price" type="text" class="form-control" placeholder="Price " aria-label="Price"
+                        aria-describedby="priceProduct" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text min-width" id="saleProduct">Sale</span>
+                      </div>
+                      <input id="sale" type="text" class="form-control" placeholder="Sale " aria-label="Sale"
+                        aria-describedby="saleProduct" />
+                    </div>
+                  </form>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                  </button>
+                  <button id="addProduct" type="button" class="btn btn-outline-warning">
+                    Add
+                  </button>
+                  <button id="updateProduct" type="button" class="btn btn-outline-warning">
+                    Update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="student-list">
+          <table class="table">
+            <thead class="color__white header__size">
+              <tr>
+
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Price</th>
+                <th scope="col">Sale</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody" class="color__white body__size"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Messages -->
+  <div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="modalMessageLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <p class="alert alert-primary" id="message-content">
+        Successfully
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <div class="modal fade" id="errorMessage" tabindex="-1" role="dialog" aria-labelledby="modalMessageLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <p class="alert alert-danger" id="message-content">
+        Failed!
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../node_modules/axios/dist/axios.min.js"></script>
+  <script src="../src/index.js" type="module"></script>
+</body>
+
+</html>
